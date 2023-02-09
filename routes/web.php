@@ -31,3 +31,6 @@ Route::get('info',function(){
 Route::get('business',function(){
     $e=9;
 });
+Route::get('other',function(){
+    $d=7;
+});
