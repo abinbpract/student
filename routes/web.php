@@ -25,3 +25,6 @@ Route::get('contact',function(){
 Route::get('about',function(){
     $b=5;
 });
+Route::get('info',function(){
+    $c=6;
+});
