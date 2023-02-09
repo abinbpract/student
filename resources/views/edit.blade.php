@@ -25,7 +25,7 @@
     <div>{{$message}}</div>
     @enderror<br>
     active: 
-    <input type="radio" name="status" id="status" value="1" @if($student->status==1) checked @endif> <label for="">yes</label>
+    <input type="radio" name="status" id="status" value="1" @if($student->status==1) checked @endif> <label for="">Yes</label>
     <input type="radio" name="status" id="status" value="0" @if($student->status==0) checked @endif> <label for="">no</label>
     <br>
 
