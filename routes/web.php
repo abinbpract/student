@@ -22,3 +22,6 @@ Route::resource('employees',EmployeeController::class);
 Route::get('contact',function(){
     $a=10;
 });
+Route::get('about',function(){
+    $b=5;
+});
