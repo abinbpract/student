@@ -28,6 +28,9 @@ Route::get('about',function(){
 Route::get('info',function(){
     $c=6;
 });
+Route::get('business',function(){
+    $e=9;
+});
 Route::get('other',function(){
     $d=7;
 });
