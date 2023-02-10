@@ -18,4 +18,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('students',StudentController::class);
-Route::resource('employees',StudentController::class);
