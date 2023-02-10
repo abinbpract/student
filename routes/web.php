@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 Route::resource('students',StudentController::class);
 Route::resource('students',StudentController::class);
+Route::resource('students',StudentController::class);
