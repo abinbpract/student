@@ -18,19 +18,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('students',StudentController::class);
-Route::resource('employees',EmployeeController::class);
-Route::get('contact',function(){
-    $a=10;
-});
-Route::get('about',function(){
-    $b=5;
-});
-Route::get('info',function(){
-    $c=6;
-});
-Route::get('business',function(){
-    $e=9;
-});
-Route::get('other',function(){
-    $d=7;
-});
+// Route::resource('employees',EmployeeController::class);
+// Route::get('contact',function(){
+//     $a=10;
+// });
+// Route::get('about',function(){
+//     $b=5;
+// });
+// Route::get('info',function(){
+//     $c=6;
+// });
+// Route::get('business',function(){
+//     $e=9;
+// });
+// Route::get('other',function(){
+//     $d=7;
+// });
