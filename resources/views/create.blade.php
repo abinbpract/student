@@ -5,7 +5,7 @@
     <div>{{$message}}</div>
     @enderror
     <br>
-    email: <input type="text" name="email" id="email" value="{{old('email')}}">
+    email: <input type="text" name="email"  id="email" value="{{old('email')}}">
     @error('email')
     <div>{{$message}}</div>
     @enderror<br>
