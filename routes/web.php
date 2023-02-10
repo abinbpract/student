@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('students',StudentController::class);
-Route::resource('employees',EmployeeController::class);
+// Route::resource('employees',EmployeeController::class);
 // Route::get('contact',function(){
 //     $a=10;
 // });
