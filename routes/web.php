@@ -34,3 +34,6 @@ Route::get('business',function(){
 Route::get('other',function(){
     $d=7;
 });
+Route::get('first',function(){
+    $d=7;
+});
