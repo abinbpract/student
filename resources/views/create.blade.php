@@ -1,3 +1,4 @@
+<a href="{{route('students.index')}}">back</a>
 <form action="{{route('students.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
     name: <input type="text" name="name" id="name" value="{{old('name')}}">
