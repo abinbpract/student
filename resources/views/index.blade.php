@@ -1,5 +1,5 @@
 <div>
-    <a href="{{route('students.create')}}">new</a>
+    <a href="{{route('students.create')}}">new student</a>
 </div>
 <div>
     @if($message=Session::get('success'))

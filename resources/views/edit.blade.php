@@ -64,7 +64,7 @@
     </tr>
     @endforeach
     <div>
-        <button type="submit">Submit</button>
+        <button type="submit">save</button>
     </div>
 
 </form>
