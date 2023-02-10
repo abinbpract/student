@@ -1,3 +1,4 @@
+<a href="{{route('students.index')}}">back</a>
 <form action="{{route('students.update',$student->id)}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
