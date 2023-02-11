@@ -20,22 +20,18 @@ class StudentController extends Controller
             if($request->name)
                 $query->where('name','LIKE','%'.$request->name.'%');
             if($request->email)
-                $query->where('email',$request->email);
+                $query->where('email','LIKE','%'.$request->email.'%');
+                
             if($request->active)
-                $query->where('status',$request->active);
-            if($request->age)
-                if($request->age ==1)
-                {
-                    $query->where('age','>',10);
-                }
-                elseif($request->age ==2)
-                {
-                    $query->where('age','<',20);
-                }
-                elseif($request->age ==3)
-                {
-                    $query->where('age','=',15);
-                }
+                if($request->active=="yes")
+                    $query->where('status',1);
+                if($request->active=="no")
+                    $query->where('status',0);
+
+            if($request->age_operator && $request->age)
+                $query->where('age',$request->age_operator,$request->age);
+            if($request->gender)
+                $query->where('gender',$request->gender);
         })->with('hobbies')->latest()->paginate(5);
         return view('index',compact('students'))->with('success','created successfully');
 

@@ -1,20 +1,29 @@
 <form action="" method="GET">
-<input type="text" name="name" id="name" placeholder="name">
-<input type="text" name="email" id="email" placeholder="email">
+<input type="text" name="name" id="name" placeholder="name" @if(request()->name!="") value="{{request()->name}}" @endif>
+<input type="text" name="email" id="email" placeholder="email" @if(request()->email!="") value="{{request()->email}}" @endif>
 <label for="">active</label>
 <select name="active" id="active">
     <option value="">select</option>
-    <option value="1">yes</option>
-    <option value="'0'">no</option>
+    <option value="yes" @if(request()->active=='yes') selected @endif > yes</option>
+    <option value="no" @if(request()->active=='no') selected @endif >no</option>
 </select>
 <label for="">age</label>
+<select name="age_operator" id="age_operator">
+    <option value="">select</option>
+    <option value="<" @if(request()->age_operator=='<') selected @endif> < </option>
+    <option value=">" @if(request()->age_operator=='>') selected @endif> > </option>
+    <option value="=" @if(request()->age_operator=='=') selected @endif> = </option>
+</select>
 <select name="age" id="age">
     <option value="">select</option>
-    <option value="1"> age > 10</option>
-    <option value="2"> age < 20 </option>
-    <option value="3"> age =15 </option>
+    @for($i=1;$i<=100;$i++)
+    <option value="{{$i}}" @if(request()->age=='{{$i}}') selected @endif> {{$i}} </option>
+    @endfor
 </select>
+<input type="radio" name="gender" id="gender" value="male" @if(request()->gender=='male') checked @endif>male
+<input type="radio" name="gender" id="gender" value="female" @if(request()->gender=='female') checked @endif>female
 <button type="submit">submit</button>
+<a href="{{route('students.index')}}">reset</a>
 </form>
 
 <div>
