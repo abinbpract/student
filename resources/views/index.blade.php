@@ -1,3 +1,22 @@
+<form action="" method="GET">
+<input type="text" name="name" id="name" placeholder="name">
+<input type="text" name="email" id="email" placeholder="email">
+<label for="">active</label>
+<select name="active" id="active">
+    <option value="">select</option>
+    <option value="1">yes</option>
+    <option value="'0'">no</option>
+</select>
+<label for="">age</label>
+<select name="age" id="age">
+    <option value="">select</option>
+    <option value="1"> age > 10</option>
+    <option value="2"> age < 20 </option>
+    <option value="3"> age =15 </option>
+</select>
+<button type="submit">submit</button>
+</form>
+
 <div>
     <a href="{{route('students.create')}}">new student</a>
 </div>

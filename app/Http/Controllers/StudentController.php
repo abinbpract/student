@@ -13,10 +13,32 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $students=Student::with('hobbies')->latest()->paginate(5);
+        $students=Student::where(function($query)use($request)
+        {
+            if($request->name)
+                $query->where('name','LIKE','%'.$request->name.'%');
+            if($request->email)
+                $query->where('email',$request->email);
+            if($request->active)
+                $query->where('status',$request->active);
+            if($request->age)
+                if($request->age ==1)
+                {
+                    $query->where('age','>',10);
+                }
+                elseif($request->age ==2)
+                {
+                    $query->where('age','<',20);
+                }
+                elseif($request->age ==3)
+                {
+                    $query->where('age','=',15);
+                }
+        })->with('hobbies')->latest()->paginate(5);
         return view('index',compact('students'))->with('success','created successfully');
+
     }
 
     /**
